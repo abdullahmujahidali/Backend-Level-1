@@ -80,3 +80,36 @@ num1 = 2
 num2 = 3
 print(sum(num1, num2))
 ```
+
+### Question No 3:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  All functions in Python by default return …?
+
+### Answer No 3:
+Yes Python does return something default if a function that doesn't return anything it means that it is returning None which is itself a value. We all know that each function with a returning value return something but what about a non-returning function? Below is the demonstration to support the answer that it does return something.
+
+```python
+def non_returning_function():
+  pass
+
+print("Function returned: ", non_returning_function())
+```
+Output:
+# ![alt text](https://i.ibb.co/GP8mrqS/Screenshot-2021-12-15-at-3-14-27-PM.png "Logo Title") 
+
+The output above shows that even a function that looks like it isn't returning anything visually but it does return None.
+
+
+### Question No 4:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  What are keyword arguments and when should we use them?
+### Answer No 4:
+Keyword arguments: <br/>
+  &nbsp; &nbsp; &nbsp;  Keyword arguments are arguments values that are needed to be passed with a key which refers to that value using keyword arguments we don't have to follow the order of parameters 
+```python
+        def sum(number1, number2):
+            print("Number 1: ", number1)
+            print("Number 2: ", number2)
+            return number1 + number2
+        sum(number2=4,number1=3) # keyword argument passed (value with a key) without following order sequence
+```
+
+We can use keyword arguments when we want to pass only a few number of arguments and don't want to pass argument for default values so in that case keyword arguments are used and when we are trying to return a number of values we use keyword argument to make it more readable for us that which values belongs to which argument.
