@@ -113,3 +113,9 @@ Keyword arguments: <br/>
 ```
 
 We can use keyword arguments when we want to pass only a few number of arguments and don't want to pass argument for default values so in that case keyword arguments are used and when we are trying to return a number of values we use keyword argument to make it more readable for us that which values belongs to which argument.
+
+
+### Question No 5:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  How can we make a parameter of a function optional?
+### Answer No 5:
+
