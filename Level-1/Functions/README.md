@@ -1,4 +1,4 @@
-# PART 1 - FUNCTIONS
+# ![alt text](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 1 - FUNCTIONS
 This README file contains function based questions which are solved using Python language.
 
 ### Question No 1:
@@ -164,3 +164,17 @@ Output: <br />
 ### Question No 8:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Write a function that prints all the prime numbers between 0 and limit where the limit is a parameter.
 ### Answer No 8:
+```python
+    def find_prime_number(end):
+        """"This method print prime num till the upper limit that is entered."""
+        start_time = time.time()
+        print("Prime Number that are in range are:", end=" ")
+        for val in range(2, end+1):
+            flag = 0
+            for n in range(2, val):
+                if (val % n) == 0:
+                    flag = 1
+            if flag == 0:
+                print(val, end=" ")
+        print("\nTime taken: %s seconds" % (time.time() - start_time))
+```

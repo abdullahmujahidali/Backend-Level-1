@@ -20,7 +20,7 @@ size = int(input("Enter how many times you want to use the function: "))
 for i in range(size):
     start_time = time.time()
     for iterator in range(size):
-        start_time = time.time()
+        # start_time = time.time()
         iteration = int(input("Enter a number to find the Fibonacci series : "))
         for i in range(iteration):
             a = fibonacci_series(i)
