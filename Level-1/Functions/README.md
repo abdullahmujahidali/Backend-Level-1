@@ -42,29 +42,29 @@ There are 3 main types of arguments:
 1. Default arguments: <br/>
   &nbsp; &nbsp; &nbsp;  A default argument are just constant values that are being passed to the function. An example of default argument is:
 ```python
-        def sum(number1, number2=55, number2=32):
-            return number1 + number2
-        sum(2) # default argument example 2 and 3 are default arguments 
+    def sum(number1, number2=55, number2=32):
+        return number1 + number2
+    sum(2) # default argument example 2 and 3 are default arguments 
 ```
 
 
 2. Keyword arguments: <br/>
   &nbsp; &nbsp; &nbsp;  Keyword arguments are arguments values that are needed to be passed with a key which refers to that value using keyword arguments we don't have to follow the order of parameters 
 ```python
-        def sum(number1, number2):
-            print("Number 1: ", number1)
-            print("Number 2: ", number2)
-            return number1 + number2
-        sum(number2=4,number1=3) # keyword argument passed (value with a key) without following order sequence
+    def sum(number1, number2):
+        print("Number 1: ", number1)
+        print("Number 2: ", number2)
+        return number1 + number2
+    sum(number2=4,number1=3) # keyword argument passed (value with a key) without following order sequence
 ```
 
 3. Positional arguments: <br />
 &nbsp; &nbsp; &nbsp;  A positional argument are arguments that are passed by following the arguments position. Positional arguments can be a mixture of default and keyword arguments too. 
 ```python
-        def sum(number1, number2, number3):
-            return number1 + number2
-        sum(11,number3=2,number2=3) # combination of default and keyword argument.
-        sum(number1=25,number3=2,number2=3) # positional argument
+    def sum(number1, number2, number3):
+        return number1 + number2
+    sum(11,number3=2,number2=3) # combination of default and keyword argument.
+    sum(number1=25,number3=2,number2=3) # positional argument
 ```
 
 <b>Parameter</b>:
@@ -94,7 +94,7 @@ def non_returning_function():
 print("Function returned: ", non_returning_function())
 ```
 Output:
-# ![alt text](https://i.ibb.co/GP8mrqS/Screenshot-2021-12-15-at-3-14-27-PM.png "Logo Title") 
+# ![alt text](https://i.ibb.co/GP8mrqS/Screenshot-2021-12-15-at-3-14-27-PM.png "Q3") 
 
 The output above shows that even a function that looks like it isn't returning anything visually but it does return None.
 
@@ -105,11 +105,11 @@ The output above shows that even a function that looks like it isn't returning a
 Keyword arguments: <br/>
   &nbsp; &nbsp; &nbsp;  Keyword arguments are arguments values that are needed to be passed with a key which refers to that value using keyword arguments we don't have to follow the order of parameters 
 ```python
-        def sum(number1, number2):
-            print("Number 1: ", number1)
-            print("Number 2: ", number2)
-            return number1 + number2
-        sum(number2=4,number1=3) # keyword argument passed (value with a key) without following order sequence
+    def sum(number1, number2):
+        print("Number 1: ", number1)
+        print("Number 2: ", number2)
+        return number1 + number2
+    sum(number2=4,number1=3) # keyword argument passed (value with a key) without following order sequence
 ```
 
 We can use keyword arguments when we want to pass only a few number of arguments and don't want to pass argument for default values so in that case keyword arguments are used and when we are trying to return a number of values we use keyword argument to make it more readable for us that which values belongs to which argument.
@@ -118,4 +118,49 @@ We can use keyword arguments when we want to pass only a few number of arguments
 ### Question No 5:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  How can we make a parameter of a function optional?
 ### Answer No 5:
+We can make parameter of a function optional by using *args keyword of python. *args is used to pass any number of arguments to a function so by using *args we can make parameters of a function optional.
 
+```python
+def optional_params(num1, num2, *args):
+  values = (num1, num2) + args
+  print(values)
+
+optional_params(10, 12)
+optional_params(1, 20, 3, 4)
+```
+Output: <br />
+<img src="Outputs/Q5.png " width="200" height="80" />
+
+
+### Question No 6:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  What happens when we prefix a parameter with an asterisk (*)?
+### Answer No 6:
+We can make parameter of a function optional by using *args keyword of python. *args is used to pass any number of arguments to a function so by using *args we can make parameters of a function optional.
+
+```python
+def optional_params(num1, num2, *args):
+  values = (num1, num2) + args
+  print(values)
+
+optional_params(10, 12)
+optional_params(1, 20, 3, 4)
+```
+Output: <br />
+<img src="Outputs/Q5.png " width="200" height="80" />
+
+### Question No 7:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  What about two asterisks (**)?
+### Answer No 7:
+Two asterisks (**) is usually used with the keyword kwargs which means (Keyword arguments) it allows a function to accept any number of keyword arguments.
+
+```python
+def keyword_argument(**kwargs):
+  print("My first name is {0} and my last name is {1}!".format(kwargs["first"],kwargs["last"]))
+keyword_argument(first = "Abdullah", last = "Mujahid")
+```
+Output: <br />
+<img src="Outputs/Q7.png " width="500" height="80" />
+
+### Question No 8:
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Write a function that prints all the prime numbers between 0 and limit where the limit is a parameter.
+### Answer No 8:
