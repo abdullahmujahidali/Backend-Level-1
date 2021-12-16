@@ -1,46 +1,30 @@
-import json  # helps us to process trees of Python abstract syntax grammar
+import json
 
-with open('Files/birthday.json') as json_file:
-    data = json.load(json_file)
-    print("Data:", (data))
 
-    dict = Dictionary()
-# student = json.loads(data)
-# if "Albert Einstein" in student:
-#     print("Key exist in JSON data")
-#     print(student["14/3/1889"], "marks is: ", student["Albert Einstein"])
-# else:
-#     print("Key doesn't exist in JSON data")
-# keyVal = input("Enter a key value: \n")
-# if keyVal in data:
-#     # Print the success message and the value of the key
-#     print("%s is found in JSON data" %keyVal)
-#     print("The value of", keyVal,"is", data[keyVal])
-# else:
-#     # Print the message if the value does not exist
-#     print("%s is not found in JSON data" %keyVal)
+def write_json(new_data, filename='Files/birthday.json'):
+    with open(filename, 'r+') as file:
+        file_data = json.load(file)
+        file_data["birthday"].update(new_data)
+        file.seek(0)
+        json.dump(file_data, file, indent=4)
+        file.close()
 
-#     print("\nPeople1:", data['people1'])
-#     print("\nPeople2:", data['people2'])
 
-# file = open("Files/birthday.json", "r")
-# data = json.load(file)
-# # ast.literal_eval Safely evaluate a string of Python literals.
-# for i in data['birthday']:
-#     print(i)
-# file.close()
-# print("Welcome to the birthday dictionary. We know the birthdays of: ")
-# print(birthday)
+def read_file():
+    with open('Files/birthday.json') as json_file:
+        data = json.load(json_file)
+        json_file.close()
+    print("Welcome to the birthday dictionary. We know the birthdays of: ")
+    print("\n------------------------")
+    for key in data['birthday']:
+        print(key)
+    print("------------------------\n")
 
-# for key in birthday:
-#     print(key)
 
-# search = input("Who's birthday do you want to look up? \n")
-# if search in birthday:
-#     result = birthday[search]
-# else:
-#     None
-# if result is None:
-#     print('No Data')
-# else:
-#     print("{}'s birthday is {}".format(search, birthday[search]))
+read_file()
+print("Add new scientist name and birthday into the file")
+name = input("Enter new name of scientist: ")
+birthday = input("Enter Date of Birth (format: DD/MM/YYYY): ")
+obj = {name: birthday, }
+
+write_json(obj)

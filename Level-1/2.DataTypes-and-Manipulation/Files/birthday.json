@@ -1,13 +1,9 @@
 {
-    "birthday":[
-        {
-            "Albert Einstein": "14/3/1889"
-        },
-        {
-            "Benjamin Franklin": "01/17/1706"
-        },
-        {
-            "Ada Lovelace": "24/2/1955"
-        }
-    ]
+    "birthday": {
+        "Albert Einstein": "14/3/1889",
+        "Benjamin Franklin": "01/17/1706",
+        "Ada Lovelace": "24/2/1955",
+        "Abdullah Mujahid": "16/06/1998",
+        "Maheen Ali": "01/05/1998"
+    }
 }
