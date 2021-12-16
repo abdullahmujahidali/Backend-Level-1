@@ -75,7 +75,7 @@ print(bool(False))
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; What are the falsy values in Python?
 
 ### Answer No 7:
-
+All those values that are None, 0, empty, False are the falsy values in Python. For instance ```python [],(),{}," ",0,0.0,0j, None , False ``` are the falsy values that are in Python.
 
 ### Question No 8:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; What is the result of 10 == “10”?
@@ -84,7 +84,6 @@ The answer to the above expression is False because the both have different data
 
 ### Question No 9:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; What is the result of “bag” > “apple”?
-
 
 ### Answer No 9:
 The answer to the expression `“bag” > “apple”` will return `True` because of the ordering the word as characters are converted into UNICODE and after converting into UNICODE they are being evaluated based on their UNICODE value. The order of bag is greater than apple so that's why it returned `True`.
@@ -99,7 +98,7 @@ The answer of the expression `not(True or False)` will return us False and that'
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Under what circumstances does the expression 18 <= age < 65 evaluate to True?
 
 ### Answer No 11:
-
+The expression will return True for cases when age is greater equal to 18 and lesser than 65. So it means any number from 18-64 inclusive will return True. Other cases beside the mentioned will always return False.
 
 ### Question No 12:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  What does range(1, 10, 2) return?
@@ -123,5 +122,5 @@ So in each iteration +2 is added to the current value of i until we reach the en
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name 3 iterable objects in Python.
 
 ### Answer No 13:
-
+An iterable object in Python are iterable objects that can be iterated through a loop returning one value at a time. The three most used iterable objects in Python are: Lists, Dictionary and Tuples.
 
