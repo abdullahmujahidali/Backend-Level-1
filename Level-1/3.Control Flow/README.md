@@ -1,4 +1,4 @@
-# ![Logo](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 2 - DATA TYPES & MANIPULATION
+# ![Logo](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 3 - CONTROL FLOW
 
 This README file contains control flow based questions which are solved using Python language.
 

@@ -1,4 +1,4 @@
-# ![alt text](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 2 - DATA TYPES & MANIPULATION
+# ![alt text](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 4 - OBJECT ORIENTED PROGRAMMING (OOP)
 
 This README file contains OOP (Object Oriented Programming) based questions which are solved using Python language.
 

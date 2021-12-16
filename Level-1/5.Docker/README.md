@@ -1,4 +1,4 @@
-# ![alt text](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 2 - DATA TYPES & MANIPULATION
+# ![alt text](https://carteblanche.tech/static/static/website/images/general/logo.svg "Logo Title")  &nbsp; &nbsp;  PART 5 - DOCKER
 
 This README file contains DOCKER based questions which is used to setup backend environment for Python.
 
