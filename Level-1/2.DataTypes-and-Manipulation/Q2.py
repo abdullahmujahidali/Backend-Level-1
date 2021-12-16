@@ -1,12 +1,12 @@
 import json
 
 
-def write_json(new_data, filename='Files/birthday.json'):
+def write_json(data, filename='Files/birthday.json'):
     with open(filename, 'r+') as file:
-        file_data = json.load(file)
-        file_data["birthday"].update(new_data)
+        birthday = json.load(file)
+        birthday["birthday"].update(data)
         file.seek(0)
-        json.dump(file_data, file, indent=4)
+        json.dump(birthday, file, indent=4)
         file.close()
 
 
