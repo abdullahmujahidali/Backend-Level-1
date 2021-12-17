@@ -13,6 +13,30 @@ This README file contains OOP (Object Oriented Programming) based questions whic
 * Think about where else it would be a good idea to use a custom class, and what kind of collection type would be most appropriate for your directory.
 * You can consider an email address to be valid if it contains one @ symbol and has a non-empty username and domain name – you don’t need to check for valid characters. You can assume that the age is already an integer value.
 
+### Answer:
+```python 
+class DuplicateUserName(Exception):
+    pass
+
+
+class AgeNotValid(Exception):
+    pass
+
+
+class UserUnderAge(Exception):
+    pass
+
+
+class EmailNotValid(Exception):
+    pass
+
+class User:
+    def __init__(self, username, email, age):
+        self.username = username
+        self.email = email
+        self.age = age
+```
+
 ### Sub Questions:
 
 1. Write an “abstract” class, Box, and use it to define some methods which any box object should have: add, for adding any number of items to the box, empty, for taking all the items out of the box and returning them as a list, and count, for counting the items which are currently in the box. Write a simple Item class which has a name attribute and a value attribute – you can assume that all the items you will use will be Item objects. Now write two subclasses of Box which use different underlying collections to store items: ListBox should use a list, and DictBox should use a dict.
