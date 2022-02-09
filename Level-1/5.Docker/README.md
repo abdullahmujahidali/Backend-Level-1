@@ -5,9 +5,12 @@ This README file contains DOCKER based questions which is used to setup backend 
 ### Question No 1:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Compare different kind of docker image families. Alpine, Slim, Stretch, Buster, Jessie, Bullseye. What does these mean ? How are they different? What advantage they provide over the others?
 
-
 ### Answer No 1:
-
+| Alpine                                                             | Slim                                                             | Stretch                                                          | Buster                                                           | Jessie                                                           | Bullseye                                                         |
+|--------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+| Alpine is a Linux based distribution. It has a very compact size   | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size |
+|                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
+|                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
 
 ### Question No 2:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Difference between Entry point and CMD directive in a Dockerfile?
