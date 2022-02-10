@@ -40,7 +40,146 @@ class User:
 ### Sub Questions:
 
 1. Write an “abstract” class, Box, and use it to define some methods which any box object should have: add, for adding any number of items to the box, empty, for taking all the items out of the box and returning them as a list, and count, for counting the items which are currently in the box. Write a simple Item class which has a name attribute and a value attribute – you can assume that all the items you will use will be Item objects. Now write two subclasses of Box which use different underlying collections to store items: ListBox should use a list, and DictBox should use a dict.
+
+### Answer:
+
+```python 
+class Box:
+    def add(self):
+        NotImplementedError()
+
+    def empty(self):
+        NotImplementedError()
+
+    def count(self):
+        NotImplementedError()
+
+
+class Item:
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+
+class ListBox(Box):
+    def __init__(self):
+        self.item = []
+
+    def add(self, *items):
+        self.item.append(items)
+
+    def empty(self):
+        items = self.item
+        self.item = []
+        return items
+
+    def count(self):
+        return len(self.item)
+
+
+class DictBox(Box):
+    def __init__(self):
+        self.item = {}
+
+    def add(self, item):
+        self.item.update({item: item})
+
+    def empty(self):
+        items = list(self.item.values())
+        self.item = {}
+        return items
+
+    def count(self):
+        return len(self.item)
+```
+
 2. Extending question 2 of this section, Write a function, repack_boxes, which takes any number of boxes as parameters, gathers up all the items they contain, and redistributes them as evenly as possible over all the boxes. Order is unimportant. There are multiple ways of doing this. Test your code with a ListBox with 20 items, a ListBox with 9 items and a DictBox with 5 items. You should end up with two boxes with 11 items each, and one box with 12 items.
 
 
 ### Answer:
+
+```python 
+class Box:
+    def add(self):
+        NotImplementedError()
+
+    def empty(self):
+        NotImplementedError()
+
+    def count(self):
+        NotImplementedError()
+
+
+class Item:
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+
+class ListBox(Box):
+    def __init__(self):
+        self.item = []
+
+    def add(self, *items):
+        self.item.append(items)
+
+    def empty(self):
+        items = self.item
+        self.item = []
+        return items
+
+    def count(self):
+        return len(self.item)
+
+
+class DictBox(Box):
+    def __init__(self):
+        self.items = {}
+
+    def add(self, item):
+        self.items.update({item: item})
+
+    def empty(self):
+        items = list(self.items.values())
+        self.items = {}
+        return items
+
+    def count(self):
+        return len(self.items)
+
+
+def repack_boxes(boxes):
+    items = []
+
+    for box in boxes:
+        items.extend(box.empty())
+    while items:
+        for box in boxes:
+            try:
+                box.add(items.pop())
+            except IndexError:
+                break
+
+
+box1 = ListBox()
+for i in range(20):
+    box1.add(Item('B1, ' + str(i), i))
+print("Box 1: ", box1.count())
+
+box2 = ListBox()
+for i in range(9):
+    box2.add(Item('B2, ' + str(i), i))
+print("Box 2: ", box2.count())
+
+box3 = DictBox()
+for i in range(5):
+    box3.add(Item('B3, ' + str(i), i))
+print("Box 3: ", box3.count())
+
+repack_boxes([box1, box2, box3])
+
+print(box1.count())
+print(box2.count())
+print(box3.count())
+
+```
