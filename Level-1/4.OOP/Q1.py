@@ -11,19 +11,19 @@ user_list = [
 
 
 class DuplicateUserName(Exception):
-    pass
+    NotImplementedError()
 
 
 class AgeNotValid(Exception):
-    pass
+    NotImplementedError()
 
 
 class UserUnderAge(Exception):
-    pass
+    NotImplementedError()
 
 
 class EmailNotValid(Exception):
-    pass
+    NotImplementedError()
 
 
 class User:

@@ -1,12 +1,12 @@
 class Box:
     def add(self):
-        pass
+        NotImplementedError()
 
     def empty(self):
-        pass
+        NotImplementedError()
 
     def count(self):
-        pass
+        NotImplementedError()
 
 
 class Item:
@@ -17,38 +17,31 @@ class Item:
 
 class ListBox(Box):
     def __init__(self):
-        self._items = []
+        self.item = []
 
     def add(self, *items):
-        self._items.extend(items)
+        self.item.append(items)
 
     def empty(self):
-        items = self._items
-        self._items = []
+        items = self.item
+        self.item = []
         return items
 
     def count(self):
-        return len(self._items)
+        return len(self.item)
 
 
 class DictBox(Box):
     def __init__(self):
-        self._items = {}
+        self.item = {}
 
-    def add(self, *items):
-        self._items.update(dict((i.name, i) for i in items))
+    def add(self, item):
+        self.item.update({item: item})
 
     def empty(self):
-        items = list(self._items.values())
-        self._items = {}
+        items = list(self.item.values())
+        self.item = {}
         return items
 
     def count(self):
-        return len(self._items)
-
-
-box1 = ListBox()
-box2 = DictBox()
-
-box1.add(Item(str(i), i) for i in range(20))
-print(box1.count())
+        return len(self.item)
