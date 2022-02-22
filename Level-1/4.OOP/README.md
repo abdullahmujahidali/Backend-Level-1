@@ -148,17 +148,22 @@ class DictBox(Box):
         return len(self.items)
 
 
-def repack_boxes(boxes):
-    items = []
+def repack_boxes(*args):
+    items, counter, result = [], 0, []
+    for boxes in args:
+        counter += boxes.count()
+        items.append(boxes.empty())
 
-    for box in boxes:
-        items.extend(box.empty())
-    while items:
-        for box in boxes:
-            try:
-                box.add(items.pop())
-            except IndexError:
-                break
+    for list in items:
+        for item in list:
+            result.append(item)
+
+    while (True):
+        for box in args:
+            if counter == 0:
+                return args
+            box.add(result.pop())
+            counter -= 1
 
 
 box1 = ListBox()
@@ -178,8 +183,8 @@ print("Box 3: ", box3.count())
 
 repack_boxes([box1, box2, box3])
 
-print(box1.count())
-print(box2.count())
-print(box3.count())
+print("Box 1 Counter", box1.count())
+print("Box 2 Counter", box2.count())
+print("Box 3 Counter", box3.count())
 
 ```

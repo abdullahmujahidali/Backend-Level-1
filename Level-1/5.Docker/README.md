@@ -28,3 +28,5 @@ This README file contains DOCKER based questions which is used to setup backend 
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Explain the concept of layering in docker images/containers?
 
 ### Answer No 4:
+
+There are a total of 4 layers inside a docker image/container. The first layer is called as Base Image/ Ubuntu OS. The 2nd layer is the update packages layer. The 3rd layer is the configure application server the 4th layer is the container layer accessible to the user. Only Layer 4 is Read/Write allowed layer the below 3 layers are read only layer. Each layer is an image. Every single instruction in a Dockerfile results in a layer. 
