@@ -15,14 +15,15 @@ This README file contains DOCKER based questions which is used to setup backend 
 ### Question No 2:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Difference between Entry point and CMD directive in a Dockerfile?
 
-
 ### Answer No 2:
+Both CMD and ENTRYPOINT are two important 
 
 ### Question No 3:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Explain this command written inside a Dockerfile:RUN mkdir /app/django/helloworld
 
 ### Answer No 3:
 
+When this command Dockerfile:RUN mkdir /app/django/helloworld will be executed it will create a directory named helloworld inside the directory of /app/django.
 
 ### Question No 4:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Explain the concept of layering in docker images/containers?
