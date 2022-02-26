@@ -12,11 +12,19 @@ This README file contains DOCKER based questions which is used to setup backend 
 |                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
 |                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
 
+<br />
+
 ### Question No 2:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Difference between Entry point and CMD directive in a Dockerfile?
 
 ### Answer No 2:
-Both CMD and ENTRYPOINT are two important 
+
+
+Both CMD and ENTRYPOINT are two important directives in a Dockerfile. 
+1. ENTRYPOINT is the command we run when container starts. CMD is used when a container starts or is specified by CMD we give an argument to ENTRYPOINT. 
+2. CMD can be overridden but we cannot override ENTRYPOINT unless we specify the --entrypoint flag in the configuration when starting the container.
+3. We define ENTRYPOINT when executing the container. We use CMD as the configuration of default arguments for an ENTRYPOINT command.
+<br />
 
 ### Question No 3:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Explain this command written inside a Dockerfile:RUN mkdir /app/django/helloworld
@@ -24,6 +32,8 @@ Both CMD and ENTRYPOINT are two important
 ### Answer No 3:
 
 When this command Dockerfile:RUN mkdir /app/django/helloworld will be executed it will create a directory named helloworld inside the directory of /app/django.
+
+<br />
 
 ### Question No 4:
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Explain the concept of layering in docker images/containers?
