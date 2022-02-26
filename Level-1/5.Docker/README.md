@@ -6,11 +6,23 @@ This README file contains DOCKER based questions which is used to setup backend 
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Compare different kind of docker image families. Alpine, Slim, Stretch, Buster, Jessie, Bullseye. What does these mean ? How are they different? What advantage they provide over the others?
 
 ### Answer No 1:
-| Alpine                                                             | Slim                                                             | Stretch                                                          | Buster                                                           | Jessie                                                           | Bullseye                                                         |
+<!-- | Alpine                                                             | Slim                                                             | Stretch                                                          | Buster                                                           | Jessie                                                           | Bullseye                                                         |
 |--------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
 | Alpine is a Linux based distribution. It has a very compact size   | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size | Alpine is a Linux based distribution. It has a very compact size |
 |                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
-|                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  |
+|                                                                    |                                                                  |                                                                  |                                                                  |                                                                  |                                                                  | -->
+
+ALPINE: Name of image is called as alpine. The package manager of alpine is apk. The manager of shell for alpine is /bin/sh. It has a compact size lesser than 10 MB.
+
+SLIM: Name of image is called as slim. It has a small size. SLIM removed lesser-used tools to make it compatible.
+
+JESSIE: Name of image for Jessie is debian:jessie. The package manager for jessie is apt. The manager of shell for jessie is /bin/bash. Size of  Jessie is lesser equal to 50mb. It is also known as Debian 8.
+
+STRETCH:  Name of image for stretch is debian:stretch. The package manager for stretch is apt. The manager of shell is /bin/bash and few more. Size of stretch is lesser equal to 40mb. It is also known as Debian 9.
+
+BUSTER: Name of image for buster is debian:buster. The package manager for buster is apt. The manager of shell is /bin/bash and few more. Size of buster is lesser equal to 50mb. It is also known as Debian 10.
+
+BULLSEYE: Name of image for bullseye is debian:bullseye. The package manager for bullseye is apt. The manager of shell is /bin/bash and few more. Size of bullseye is lesser equal to 50mb. It is also known as Debian 11. 
 
 <br />
 
